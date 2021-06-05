@@ -20,11 +20,11 @@ import kodlama.io.HRMS.entities.concretes.JobSeeker;
 public class JobSeekerManager implements JobSeekerService {
 
 	private JobSeekerDao jobSeekerDao;
-	private ValidationService validationService;
+	private ValidationService<JobSeeker> validationService;
 	private EmailValidationService emailValidationService;
 	
 	@Autowired
-	public JobSeekerManager(JobSeekerDao jobSeekerDao,ValidationService validationService,EmailValidationService emailValidationService) {
+	public JobSeekerManager(JobSeekerDao jobSeekerDao,ValidationService<JobSeeker>validationService,EmailValidationService emailValidationService) {
 		super();
 		this.jobSeekerDao = jobSeekerDao;
 		this.validationService = validationService;

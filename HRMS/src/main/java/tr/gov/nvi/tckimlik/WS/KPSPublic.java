@@ -7,6 +7,9 @@
 
 package tr.gov.nvi.tckimlik.WS;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public interface KPSPublic extends javax.xml.rpc.Service {
     public java.lang.String getKPSPublicSoapAddress();
 

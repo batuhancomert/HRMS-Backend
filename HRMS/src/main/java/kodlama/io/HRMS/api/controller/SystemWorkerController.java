@@ -21,10 +21,10 @@ import kodlama.io.HRMS.entities.concretes.SystemWorker;
 
 public class SystemWorkerController {
 
-	@Autowired
+	
 	private SystemWorkerService systemWorkerService;
 
-	
+	@Autowired
 	public SystemWorkerController (SystemWorkerService systemWorkerService) {
 		super();
 		this.systemWorkerService = systemWorkerService;

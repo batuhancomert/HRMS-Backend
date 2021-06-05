@@ -20,10 +20,10 @@ import kodlama.io.HRMS.entities.concretes.JobSeeker;
 @RequestMapping("/api/job_seeker")
 public class JobSeekerController {
 
-	@Autowired
+	
 	private JobSeekerService jobSeekerService;
 
-	
+	@Autowired
 	public JobSeekerController (JobSeekerService jobSeekerService) {
 		super();
 		this.jobSeekerService = jobSeekerService;

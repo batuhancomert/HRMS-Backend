@@ -9,6 +9,4 @@ public interface EmployerDao extends JpaRepository<Employer, Integer> {
 
 	boolean existsByEmail(String email);
 	
-
-
 }

@@ -1,9 +1,14 @@
 package kodlama.io.HRMS.entities.concretes;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -33,5 +38,11 @@ public class Employer extends User{
 	@NotBlank(message="Bu Alanın Doldurulması Zorunlu")
 	@Column(name="company_website")
 	private String companyWebSite;
+	
+	@JsonIgnore
+	@OneToMany(mappedBy="employer")
+	private List<JobAdvertisement> jobAdvertisements;
+	
+	
 
 }

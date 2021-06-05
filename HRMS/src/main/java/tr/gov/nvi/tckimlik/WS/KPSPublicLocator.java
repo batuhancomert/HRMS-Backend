@@ -7,6 +7,9 @@
 
 package tr.gov.nvi.tckimlik.WS;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class KPSPublicLocator extends org.apache.axis.client.Service implements tr.gov.nvi.tckimlik.WS.KPSPublic {
 
     public KPSPublicLocator() {

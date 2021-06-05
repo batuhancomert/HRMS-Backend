@@ -20,10 +20,10 @@ import kodlama.io.HRMS.entities.concretes.Employer;
 @RequestMapping("/api/employer")
 public class EmployerController {
 
-	@Autowired
+	
 	private EmployerService employerService;
 
-	
+	@Autowired
 	public EmployerController(EmployerService employerService) {
 		super();
 		this.employerService = employerService;

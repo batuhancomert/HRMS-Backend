@@ -20,10 +20,10 @@ import kodlama.io.HRMS.entities.concretes.JobPosition;
 @RequestMapping("/api/job_position")
 public class JobPositionController {
 
-	@Autowired
+	
 	private JobPositionService jobPositionService ;
 
-	
+	@Autowired
 	public JobPositionController (JobPositionService jobPositionService) {
 		super();
 		this.jobPositionService = jobPositionService;
