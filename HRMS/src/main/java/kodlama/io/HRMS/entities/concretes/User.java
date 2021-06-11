@@ -11,6 +11,7 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
 import lombok.AllArgsConstructor;
@@ -27,12 +28,10 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	
-	
-	
 	@Column(name="id")
 	private int id;
 	
+	@Email
 	@NotBlank(message="Eposta adresi giriniz")
 	@Column(name="email")
 	private String email;

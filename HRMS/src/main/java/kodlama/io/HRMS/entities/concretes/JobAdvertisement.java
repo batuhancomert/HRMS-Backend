@@ -1,6 +1,9 @@
 package kodlama.io.HRMS.entities.concretes;
 
 
+import java.time.LocalDate;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,14 +23,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="job_advertisement")
+@Table(name="job_advertisements")
 @JsonIgnoreProperties({"hibernateLazyInitializer","handler","jobAdvertisements"})
 
 public class JobAdvertisement {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	
 	@Column(name="id")
 	private int id;
 	
@@ -35,32 +37,32 @@ public class JobAdvertisement {
 	private String description;
 	
 	@Column(name="application_deadline")
-	private String applicationDeadline;
+	private LocalDate applicationDeadline;
 	
 	@Column(name="created_date")
-	private String createdDate;
+	private Date createdDate;
 	
 	@Column(name="is_active")
-	private boolean isActive;
+	private boolean isActive = true ;
 	
 	@Column(name="min_salary")
-	private String minSalary;
+	private int minSalary;
 	
 	@Column(name="max_salary")
-	private String maxSalary;
+	private int maxSalary;
 	
 	@Column(name="open_position")
 	private String openPosition;
 	
 	@ManyToOne
-	@JoinColumn(name="employers")
+	@JoinColumn(name="employer_id")
 	private Employer employer;
 	
 	@ManyToOne
-	@JoinColumn(name="cities")
+	@JoinColumn(name="city_id")
 	private City city;
 	
 	@ManyToOne
-	@JoinColumn(name="job_position")
+	@JoinColumn(name="job_position_id")
 	private JobPosition jobPosition;
 }

@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
 public class Employer extends User{
 	
 	
-	private int id;
+	
 	
 	@NotBlank(message="Bu Alanın Doldurulması Zorunlu")
 	@Column(name="company_name")
@@ -40,6 +40,7 @@ public class Employer extends User{
 	private String companyWebSite;
 	
 	@JsonIgnore
+	
 	@OneToMany(mappedBy="employer")
 	private List<JobAdvertisement> jobAdvertisements;
 	

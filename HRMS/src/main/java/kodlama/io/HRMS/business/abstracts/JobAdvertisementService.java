@@ -14,10 +14,13 @@ public interface JobAdvertisementService {
 	
 	DataResult<List<JobAdvertisement>> getAll();
 	
-	DataResult<List<JobAdvertisement>> getByIsActive(boolean isActive);
 	
-	DataResult<List<JobAdvertisement>> getByIsActiveOrderByApplicationDeadline(boolean isActive);
+	DataResult<List<JobAdvertisement>> getByIsActiveTrue();
 	
-	DataResult<List<JobAdvertisement>> getByIsActiveAndEmployer_CompanyName(boolean status, String companyName);
+	DataResult<List<JobAdvertisement>> getByOrderByApplicationDeadline();
+	
+	DataResult<List<JobAdvertisement>> getByIsActiveTrueAndEmployer_Id(int employerId);
+	 
+	 
 }
 	

@@ -27,13 +27,13 @@ public class SystemWorkerManager implements SystemWorkerService {
 	@Override
 	public DataResult<List<SystemWorker>> getAll() {
 		return new SuccessDataResult<List<SystemWorker>>
-		(this.systemWorkerDao.findAll(),"SystemWorkers Listed");
+		(this.systemWorkerDao.findAll(),"System Workers Listed");
 	}
 
 	@Override
 	public Result add(SystemWorker systemWorker) {
 		this.systemWorkerDao.save(systemWorker);
-		return new SuccessResult("SystemWorkers Added");
+		return new SuccessResult("System Workers Added");
 	}
 
 }

@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Table(name="job_seekers")
 public class JobSeeker extends User {
 
-	private int id;
+	
 	
 	@NotBlank(message="Bu Alanın Doldurulması Zorunlu")
 	@Column(name="first_name")

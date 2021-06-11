@@ -1,5 +1,6 @@
 package kodlama.io.HRMS.business.concretes;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import kodlama.io.HRMS.core.utilities.result.Result;
 import kodlama.io.HRMS.core.utilities.result.SuccessDataResult;
 import kodlama.io.HRMS.core.utilities.result.SuccessResult;
 import kodlama.io.HRMS.dataAccess.abstracts.JobAdvertisementDao;
+import kodlama.io.HRMS.entities.concretes.Employer;
 import kodlama.io.HRMS.entities.concretes.JobAdvertisement;
 
 @Service
@@ -41,28 +43,24 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	@Override
 	public DataResult<List<JobAdvertisement>> getAll() {
 		return new SuccessDataResult<List<JobAdvertisement>>
-		(this.jobAdvertisementDao.findAll(),"Tüm iş ilanları görüntülendi.");
+		(this.jobAdvertisementDao.findAll(),"Tüm İş ilanları Görüntülendi");
 	}
 
 	@Override
-	public DataResult<List<JobAdvertisement>> getByIsActive(boolean isActive) {
-		return new SuccessDataResult<List<JobAdvertisement>>
-		(this.jobAdvertisementDao.getByIsActive(isActive),"Veriler başarıyla getirildi.");
-		
+	public DataResult<List<JobAdvertisement>> getByIsActiveTrue() {
+		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getByIsActiveTrue());
 	}
 
 	@Override
-	public DataResult<List<JobAdvertisement>> getByIsActiveOrderByApplicationDeadline(boolean isActive) {
-		return new SuccessDataResult<List<JobAdvertisement>>
-		(this.jobAdvertisementDao.getByIsActiveOrderByApplicationDeadline(isActive));
+	public DataResult<List<JobAdvertisement>> getByOrderByApplicationDeadline() {
+		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getByOrderByApplicationDeadline());
 	}
 
 	@Override
-	public DataResult<List<JobAdvertisement>> getByIsActiveAndEmployer_CompanyName(boolean isActive,
-			String companyName) {
-		return new SuccessDataResult<List<JobAdvertisement>>
-		(this.jobAdvertisementDao.getByIsActiveAndEmployer_CompanyName(isActive, companyName));
+	public DataResult<List<JobAdvertisement>> getByIsActiveTrueAndEmployer_Id(int employerId) {
+		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getByIsActiveTrueAndEmployer_Id(employerId));
 	}
+	
 
 
 }
