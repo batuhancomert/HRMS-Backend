@@ -11,11 +11,11 @@ import kodlama.io.HRMS.entities.concretes.JobAdvertisement;
 public interface JobAdvertisementDao extends JpaRepository<JobAdvertisement, Integer> {
 
 	
-	   List<JobAdvertisement> getByIsActiveTrue(); 
+	   List<JobAdvertisement> getByIsActive(boolean isActive); 
 	   
 	   List<JobAdvertisement> getByOrderByApplicationDeadline(); 
 	   
-	   List<JobAdvertisement> getByIsActiveTrueAndEmployer_Id(int employerId);
+	   List<JobAdvertisement> getByIsActiveAndEmployer_companyName(boolean status, String companyName);
 	   
 	   
 	 }

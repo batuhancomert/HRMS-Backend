@@ -43,7 +43,7 @@ public class JobAdvertisement {
 	private Date createdDate;
 	
 	@Column(name="is_active")
-	private boolean isActive = true ;
+	private boolean isActive;
 	
 	@Column(name="min_salary")
 	private int minSalary;

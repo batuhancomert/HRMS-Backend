@@ -47,8 +47,8 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	}
 
 	@Override
-	public DataResult<List<JobAdvertisement>> getByIsActiveTrue() {
-		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getByIsActiveTrue());
+	public DataResult<List<JobAdvertisement>> getByIsActive(boolean isActive) {
+		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getByIsActive(isActive));
 	}
 
 	@Override
@@ -57,8 +57,8 @@ public class JobAdvertisementManager implements JobAdvertisementService {
 	}
 
 	@Override
-	public DataResult<List<JobAdvertisement>> getByIsActiveTrueAndEmployer_Id(int employerId) {
-		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getByIsActiveTrueAndEmployer_Id(employerId));
+	public DataResult<List<JobAdvertisement>> getByIsActiveAndEmployer_companyName(boolean status, String companyName) {
+		return new SuccessDataResult<List<JobAdvertisement>>(this.jobAdvertisementDao.getByIsActiveAndEmployer_companyName(status,companyName));
 	}
 	
 

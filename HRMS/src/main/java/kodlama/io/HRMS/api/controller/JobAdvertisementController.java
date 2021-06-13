@@ -46,8 +46,8 @@ public class JobAdvertisementController {
 		return this.jobAdvertisementService.delete(jobAdvertisement);
 	}
 	@GetMapping("/getByIsActive")
-	public DataResult<List<JobAdvertisement>> getByIsActiveTrue() {
-		return this.jobAdvertisementService.getByIsActiveTrue();
+	public DataResult<List<JobAdvertisement>> getByIsActive(boolean isActive) {
+		return this.jobAdvertisementService.getByIsActive(isActive);
 	}
 
 	@GetMapping("/getByOrderByApplicationDeadline")
@@ -55,8 +55,8 @@ public class JobAdvertisementController {
 		return this.jobAdvertisementService.getByOrderByApplicationDeadline();	}
 
 	@GetMapping("/getByIsActiveTrueAndEmployer")
-	public DataResult<List<JobAdvertisement>> getByIsActiveTrueAndEmployer_Id(int employerId) {
-		return this.jobAdvertisementService.getByIsActiveTrueAndEmployer_Id(employerId);
+	public DataResult<List<JobAdvertisement>> getByIsActiveAndEmployer_companyName(boolean status, String companyName) {
+		return this.jobAdvertisementService.getByIsActiveAndEmployer_companyName(status,companyName);
 	}
 	
 }
