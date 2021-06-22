@@ -20,7 +20,7 @@ public class EmailValidationManager implements EmailValidationService {
 		return false;
 	}
 	
-	//Email Rules
+	
 	public boolean checkEmail(String email) {
 		String regex = "^[a-z0-9._+-]+@[a-z0-9.-]+.(com|org|net|gov)(.[a-z]{2})?$";
 		Pattern pattern = Pattern.compile(regex);

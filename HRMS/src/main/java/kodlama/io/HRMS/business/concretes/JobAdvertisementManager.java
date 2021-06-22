@@ -1,6 +1,5 @@
 package kodlama.io.HRMS.business.concretes;
 
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,6 @@ import kodlama.io.HRMS.core.utilities.result.Result;
 import kodlama.io.HRMS.core.utilities.result.SuccessDataResult;
 import kodlama.io.HRMS.core.utilities.result.SuccessResult;
 import kodlama.io.HRMS.dataAccess.abstracts.JobAdvertisementDao;
-import kodlama.io.HRMS.entities.concretes.Employer;
 import kodlama.io.HRMS.entities.concretes.JobAdvertisement;
 
 @Service

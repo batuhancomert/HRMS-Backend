@@ -56,4 +56,10 @@ public class JobSeekerManager implements JobSeekerService {
 		}
 		return new ErrorResult("JobSeekers Not Added");
 	}
+
+	@Override
+	public DataResult<JobSeeker> getById(int jobSeekerId) {
+		
+		return new SuccessDataResult<JobSeeker>(this.jobSeekerDao.getById(jobSeekerId));
+	}
 }

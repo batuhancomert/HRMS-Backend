@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 import kodlama.io.HRMS.business.abstracts.JobAdvertisementService;
 import kodlama.io.HRMS.core.utilities.result.DataResult;
 import kodlama.io.HRMS.core.utilities.result.Result;
-import kodlama.io.HRMS.entities.concretes.Employer;
 import kodlama.io.HRMS.entities.concretes.JobAdvertisement;
 
 @RestController
